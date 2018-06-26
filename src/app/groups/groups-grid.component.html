@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row grid-container">
+        <div class="col-md-10">
+            <div class="table">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th cmSortBy="firstName" (sorted)="sort($event)">First Name</th>
+                            <th cmSortBy="lastName" (sorted)="sort($event)">Last Name</th>
+                            <th cmSortBy="address" (sorted)="sort($event)">Address</th>
+                            <th cmSortBy="city" (sorted)="sort($event)">City</th>
+                            <th cmSortBy="state.name" (sorted)="sort($event)">State</th>
+                            <!-- Or you can do this directly rather than using sort-by directive -->
+                            <th (click)="sort('orderTotal')">Order Total</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let group of groups;trackBy:trackbyService.group">
+                            <td><img src="assets/images/{{ group.gender | lowercase }}.png" class="grid-image" alt="group Image" /></td>
+                            <td><a [routerLink]="['/groups',group.id,'details']">{{ group.firstName | capitalize }}</a></td>
+                            <td>{{ group.lastName | capitalize }}</td>
+                            <td>{{ group.address }}</td>
+                            <td>{{ group.city | trim }}</td>
+                            <td>{{ group.state.name }}</td>
+                            <td>{{ group.orderTotal | currency:'USD':'symbol' }}</td>
+                            <td><a [routerLink]="['/groups',group.id,'orders']">View Orders</a></td>
+                        </tr>
+                        <tr *ngIf="!groups.length">
+                            <td>&nbsp;</td>
+                            <td colspan="7">No Records Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+[{
+    "id": 1,
+    "groupName": "Rocky MH",
+    "groupId": 10599432,
+    "status": "Active",
+    "effective": "01/01/2015",
+    "renewal": "01/01/2019",
+    "termDate": "",
+    "address": "1234 Anywhere St.",
+    "city": " Sandy ",
+    "state": {
+        "abbreviation": "UT",
+        "name": "Utah"
+    },
+    "latitude": 40.5650,
+    "longitude": -111.8390
+}, {
+    "id": 2,
+    "groupName": "Select Benefits Group",
+    "groupId": 10345512,
+    "status": "Active",
+    "effective": "07/01/1989",
+    "renewal": "01/01/2019",
+    "termDate": "",
+    "address": "75 W Towne Ridge Pkwy tower 2 suite 500",
+    "city": " Sandy ",
+    "state": {
+        "abbreviation": "UT",
+        "name": "Utah"
+    },
+    "latitude": 40.55754,
+    "longitude": -111.8324
+}, {
+    "id": 3,
+    "groupName": "Harmony",
+    "groupId": 1066758,
+    "status": "Active",
+    "effective": "01/01/2016",
+    "renewal": "01/01/2019",
+    "termDate": "",
+    "address": "1750 W Traverse Pkwy",
+    "city": " Lehi ",
+    "state": {
+        "abbreviation": "UT",
+        "name": "Utah"
+    },
+    "latitude": 40.4333,
+    "longitude": -111.8784
+}]

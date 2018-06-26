@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row card-container">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let group of groups;trackBy:trackbyService.group">
+            <div class="card">
+                <div class="card-header">
+                    <a [routerLink]="['/groups',group.id,'details']" class="white">
+                        {{group.firstName | capitalize }} {{ group.lastName | capitalize }}
+                    </a>
+                    <a [routerLink]="['/groups',group.id,'edit']">
+                        <i title="Edit" class="pull-right glyphicon glyphicon-edit edit-icon white"></i>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="pull-left card-body-left">
+                            <a href="#" class="white">
+                                <img src="assets/images/{{group.gender | lowercase}}.png" class="card-image" />
+                            </a>
+                        </div>
+                        <div class="pull-left card-body-right">
+                            <div class="card-body-content">{{group.city | trim }}, {{group.state.name}}</div>
+                            <a [routerLink]="['/groups',group.id,'orders']">View Orders</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!groups.length">
+            No Records Found
+        </div>
+    </div>
+</div>
